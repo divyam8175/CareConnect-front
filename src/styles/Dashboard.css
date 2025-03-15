@@ -1,0 +1,38 @@
+body{
+  background-color: #007300;
+  }
+.dashboard-links{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+.dashboard-links a{
+    color: white;
+    text-decoration: none;
+    padding: 0 10px;
+}
+.main{
+    background-color: #00897B ;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    /* background-color: #00c9a7; */
+    color: white;
+    height: 50px;
+    margin: auto;
+}
+.main img{
+    width: 50px;
+    height:50px;
+    object-fit: cover;
+}
+.login-link{
+    color: white;
+    background-color: #FF9800 ;
+    margin:5px;
+    padding:10px;
+    border-radius:10px;
+    /* text-decoration: none; */
+}
