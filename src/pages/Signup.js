@@ -31,7 +31,7 @@ const Signup = () => {
     console.log("Form data to be sent:", formData);
 
     try {
-      const response = await fetch("http://localhost:3003/api/auth/signup", {
+      const response = await fetch("https://careconnect-back.onrender.com/api/auth/signup", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -44,16 +44,15 @@ const Signup = () => {
       if (response.ok) {
         const result = await response.json();
         console.log("Signup successful:", result);
-        // Redirect to login page
-        navigate("/login");
+        navigate("/login"); // Redirect to login page
       } else {
         const error = await response.json();
         console.error("Signup failed:", error);
-        // Handle signup error (e.g., display error message)
+        alert(error.message || "Signup failed, please try again.");
       }
     } catch (error) {
       console.error("Error:", error);
-      // Handle network or other errors
+      alert("Network error. Please try again later.");
     }
   };
 
